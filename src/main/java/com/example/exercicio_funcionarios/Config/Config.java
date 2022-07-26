@@ -18,7 +18,7 @@ public class Config {
 		ClientConfiguration clientConfiguration = ClientConfiguration.builder()
 				.connectedTo("localhost:9200")
 				.withConnectTimeout(10000)
-				.withSocketTimeout(1000)
+				.withSocketTimeout(10000)
 				.build();
 
 		return RestClients.create(clientConfiguration).rest();

@@ -9,13 +9,13 @@ import org.springframework.data.elasticsearch.annotations.FieldType;
 
 @Getter
 @Setter
-@Document(indexName = "Funcionarios_Doc")
+@Document(indexName = "funcionarios_doc")
 public class Funcionarios {
 
 	@Id
 	private int id;
 
-	@Field(type = FieldType.Text)
+	@Field(name = "nome", type = FieldType.Text)
 	private String nome;
 
 	@Field(type = FieldType.Text)
