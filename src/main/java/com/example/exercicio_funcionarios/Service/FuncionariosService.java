@@ -5,6 +5,7 @@ import com.example.exercicio_funcionarios.Repository.FuncionariosRepo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+
 @Service
 public class FuncionariosService implements IFuncionariosService {
 
@@ -15,4 +16,10 @@ public class FuncionariosService implements IFuncionariosService {
 	public Funcionarios save(Funcionarios funcionarios) {
 		return repo.save(funcionarios);
 	}
+
+	@Override
+	public Funcionarios findById(int id) {
+		return repo.findById(id).get();
+	}
+
 }
