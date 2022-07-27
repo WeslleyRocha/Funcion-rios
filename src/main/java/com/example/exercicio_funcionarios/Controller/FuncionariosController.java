@@ -9,6 +9,8 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import javax.validation.Valid;
+
 @RestController
 @RequestMapping("/funcionarios")
 public class FuncionariosController {
@@ -17,7 +19,7 @@ public class FuncionariosController {
 	private FuncionariosService service;
 
 	@PostMapping
-	public ResponseEntity<Funcionarios> save(@RequestBody Funcionarios funcionarios){
+	public ResponseEntity<Funcionarios> save(@RequestBody @Valid Funcionarios funcionarios){
 		return ResponseEntity.ok(service.save(funcionarios));
 	}
 }
