@@ -44,7 +44,7 @@ curl --location --request GET 'localhost:8080/funcionarios/' \
 
 - GET - Buscar por ID
 ```
-curl --location --request GET 'localhost:8080/funcionarios/10'
+curl --location --request GET 'localhost:8080/funcionarios/{id}'
 ```
 <br>
 
@@ -56,5 +56,5 @@ curl --location --request GET 'localhost:8080/funcionarios'
 
 - Delete - Apagar
 ```
-curl --location --request DELETE 'localhost:8080/funcionarios/2'
+curl --location --request DELETE 'localhost:8080/funcionarios/{id}'
 ```
