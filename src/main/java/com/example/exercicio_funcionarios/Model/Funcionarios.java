@@ -29,8 +29,6 @@ public class Funcionarios {
 	@Size(min = 2, max = 10, message = "Favor informar o Sobrenome.")
 	private String sobrenome;
 
-	@NotBlank
-	@Field(type = FieldType.Integer)
 	@Min(value = 18, message = "Idade minima 18 anos.")
 	private int idade;
 
