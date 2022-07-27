@@ -2,6 +2,8 @@ package com.example.exercicio_funcionarios.Service;
 
 import com.example.exercicio_funcionarios.Model.Funcionarios;
 
+import java.util.List;
+
 
 public interface IFuncionariosService {
 
@@ -10,5 +12,7 @@ public interface IFuncionariosService {
 	Funcionarios findById(int id);
 
 	Funcionarios update(Funcionarios funcionarios);
+
+	List<Funcionarios> findAll();
 
 }

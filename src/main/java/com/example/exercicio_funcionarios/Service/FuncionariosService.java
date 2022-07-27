@@ -5,6 +5,9 @@ import com.example.exercicio_funcionarios.Repository.FuncionariosRepo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.ArrayList;
+import java.util.List;
+
 
 @Service
 public class FuncionariosService implements IFuncionariosService {
@@ -25,5 +28,16 @@ public class FuncionariosService implements IFuncionariosService {
 	@Override
 	public Funcionarios update(Funcionarios funcionarios) {
 		return repo.save(funcionarios);
+	}
+
+	@Override
+	public List<Funcionarios> findAll() {
+		List<Funcionarios> list = new ArrayList<>();
+
+		Iterable<Funcionarios> resp = repo.findAll();
+
+		resp.forEach(list::add);
+
+		return list;
 	}
 }

@@ -7,6 +7,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import javax.validation.Valid;
+import java.util.List;
 
 
 @RestController
@@ -29,6 +30,11 @@ public class FuncionariosController {
 	@PutMapping("/{id}") //UPDATE
 	public ResponseEntity<Funcionarios> update(@RequestBody @Valid Funcionarios funcionarios){
 		return ResponseEntity.ok(service.update(funcionarios));
+	}
+
+	@GetMapping//GET ALL
+	public ResponseEntity<List<Funcionarios>> findAll(){
+		return ResponseEntity.ok(service.findAll());
 	}
 
 }
