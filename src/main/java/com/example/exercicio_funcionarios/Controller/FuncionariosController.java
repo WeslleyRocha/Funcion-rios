@@ -37,4 +37,8 @@ public class FuncionariosController {
 		return ResponseEntity.ok(service.findAll());
 	}
 
+	@DeleteMapping("/{id}")//DELETE by ID.
+	public ResponseEntity<String> deleteById(@PathVariable int id){
+		return ResponseEntity.ok(service.deleteById(id));
+	}
 }

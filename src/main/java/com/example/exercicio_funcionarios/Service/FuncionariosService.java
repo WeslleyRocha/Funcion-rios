@@ -40,4 +40,10 @@ public class FuncionariosService implements IFuncionariosService {
 
 		return list;
 	}
+
+	@Override
+	public String deleteById(int id) {
+		repo.deleteById(id);
+		return id + " Removido com sucesso!";
+	}
 }

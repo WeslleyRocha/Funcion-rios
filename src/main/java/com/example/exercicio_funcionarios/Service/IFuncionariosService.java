@@ -15,4 +15,6 @@ public interface IFuncionariosService {
 
 	List<Funcionarios> findAll();
 
+	String deleteById(int id); //String para trazer uma mensagem na confirmação do delete.
+
 }
