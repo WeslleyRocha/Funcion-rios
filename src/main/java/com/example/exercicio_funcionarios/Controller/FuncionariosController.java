@@ -8,6 +8,7 @@ import org.springframework.web.bind.annotation.*;
 
 import javax.validation.Valid;
 
+
 @RestController
 @RequestMapping("/funcionarios")
 public class FuncionariosController {
@@ -24,4 +25,10 @@ public class FuncionariosController {
 	public ResponseEntity<Funcionarios> findById(@PathVariable @Valid int id){
 		return ResponseEntity.ok(service.findById(id));
 	}
+
+	@PutMapping("/{id}") //UPDATE
+	public ResponseEntity<Funcionarios> update(@RequestBody @Valid Funcionarios funcionarios){
+		return ResponseEntity.ok(service.update(funcionarios));
+	}
+
 }

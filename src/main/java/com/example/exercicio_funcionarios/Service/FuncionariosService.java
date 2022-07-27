@@ -22,4 +22,8 @@ public class FuncionariosService implements IFuncionariosService {
 		return repo.findById(id).get();
 	}
 
+	@Override
+	public Funcionarios update(Funcionarios funcionarios) {
+		return repo.save(funcionarios);
+	}
 }

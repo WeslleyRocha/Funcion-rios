@@ -9,4 +9,6 @@ public interface IFuncionariosService {
 
 	Funcionarios findById(int id);
 
+	Funcionarios update(Funcionarios funcionarios);
+
 }
