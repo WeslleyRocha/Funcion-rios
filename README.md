@@ -1,9 +1,9 @@
 # Funcionarios
-* Storage Implementação IV - Prática  Integradora II - Exercício I - Funcionários, utilizando Spring + ElasticSearch.
+* Storage Implementação IV - Prática  Integradora II - Exercício I - Funcionários, utilizando Spring + ElasticSearch (Banco de dados noSQL).
 
 **-Exercício de Funcionários**
 
-***Requisitos**
+✅ **Requisitos**
 
 Crie um projeto usando Spring Boot que permita **adicionar** e **modificar** funcionários por
 meio de um endpoint. Os funcionários devem conter os atributos: nome, sobrenome,
@@ -40,7 +40,7 @@ curl --location --request GET 'localhost:8080/funcionarios/' \
 ```
 <br>
 
-***Bônus**
+⭐️ **Bônus**
 
 - GET - Buscar por ID
 ```
