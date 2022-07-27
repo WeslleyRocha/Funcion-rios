@@ -4,7 +4,6 @@ import com.example.exercicio_funcionarios.Model.Funcionarios;
 
 import java.util.List;
 
-
 public interface IFuncionariosService {
 
 	Funcionarios save (Funcionarios funcionarios);
